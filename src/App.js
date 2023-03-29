@@ -1,11 +1,18 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-
+import Home from './components/Home/Home';
+import Footer from './components/shared/Footer';
+import Navbar from './components/shared/Navbar';
+import routes from "./routes/Routes";
 function App() {
   return (
     <div>
-      <h1 class="text-4xl font-bold underline ">
-    Hello world!
-  </h1>
+      {/* 
+      <Home></Home>
+       */}
+      <Navbar></Navbar>
+      <RouterProvider router={routes} />
+      <Footer></Footer>
     </div>
   );
 }
