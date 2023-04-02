@@ -2,6 +2,7 @@ import React from 'react';
 import bestSellingImg from "../../../Assets/best selling.jpg"
 import mobile from "../../../Assets/mobile1.jpg"
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 const MobileStore = () => {
     var settings = {
         dots: true,
@@ -29,7 +30,7 @@ const MobileStore = () => {
         <img className='w-20' src={bestSellingImg} alt="" />
      <h1>Best Selling Products</h1>   
      </div>
-     <button className="btn btn-outline btn-info">Button</button>
+     <Link to="/product/mobile-store" className="btn btn-outline btn-info">View All</Link>
     </div>
 
     {/* All Products */}

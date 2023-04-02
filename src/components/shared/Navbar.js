@@ -1,12 +1,13 @@
 import React from 'react';
 import { FcSearch } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div className='lg:px-10 bg-indigo-600 text-white'>
             <div className="navbar ">
                 <div className="navbar-start">
-                    <a className="btn btn-ghost normal-case text-xl">AmadershopBD</a>
+                    <Link to="/home" className="btn btn-ghost normal-case text-xl">AmadershopBD</Link>
                 </div>
                 <div className="navbar-center">
                 <div className="form-control">

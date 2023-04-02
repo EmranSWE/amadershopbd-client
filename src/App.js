@@ -1,18 +1,11 @@
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home/Home';
-import Footer from './components/shared/Footer';
-import Navbar from './components/shared/Navbar';
+import Spinner from './components/shared/Spinner';
 import routes from "./routes/Routes";
 function App() {
   return (
     <div>
-      {/* 
-      <Home></Home>
-       */}
-      <Navbar></Navbar>
-      <RouterProvider router={routes} />
-      <Footer></Footer>
+      <RouterProvider router={routes} fallbackElement={<Spinner />}/>
     </div>
   );
 }

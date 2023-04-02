@@ -13,7 +13,6 @@ import MobileStore from './Mobile Store/MobileStore';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <Header></Header>
             <Feature></Feature>
             <BestSell></BestSell>
@@ -22,7 +21,6 @@ const Home = () => {
             <Gadgets></Gadgets>
             <Laptops></Laptops>
             <Lifestyle></Lifestyle>
-            <Footer></Footer>
         </div>
     );
 };
