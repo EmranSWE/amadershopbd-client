@@ -2,7 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import mobile from "../../Assets/mobile1.jpg"
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addProduct, addToCart } from '../../redux/actions/productAction';
 const ProductDetails = () => {
     const { id } = useParams();
     const bestSelling = [
@@ -29,7 +30,8 @@ const handleSubmit = ()=>{
 }
 
 const state = useSelector(state=> state);
-    console.log(state)
+
+    const dispatch=useDispatch()
     return (
         <div>
             <h1>Product Details:{id}</h1>
@@ -55,7 +57,7 @@ const state = useSelector(state=> state);
                     <h1>Warranty Information</h1>
                     <h1>Emi Available</h1>
                     <h1>Display Size(Inches)</h1>
-                    <button className='px-5 py-2 bg-blue-200 rounded' onClick={()=>handleSubmit()}>Buy Now</button>
+                    <button className='px-5 py-2 bg-blue-200 rounded'  onClick={() => dispatch(addToCart(buyProd))}>Add to cart</button>
                     <button className='px-5 py-2 bg-blue-200 rounded' onClick={()=>handleSubmit()}>Buy Now</button>
                 </div>
             </div>

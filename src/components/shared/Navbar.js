@@ -29,7 +29,7 @@ const Navbar = () => {
                                 <span className="font-bold text-lg text-black">8 Items</span>
                                 <span className="text-info">Subtotal: $999</span>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary btn-block">View cart</button>
+                                    <Link to="/checkout/cart" className="btn btn-primary btn-block">View cart</Link>
                                 </div>
                             </div>
                         </div>
@@ -42,10 +42,10 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-black">
                             <li>
-                                <a className="justify-between">
+                                <Link to="/account/profile" className="justify-between">
                                     Profile
                                     <span className="badge">New</span>
-                                </a>
+                                </Link>
                             </li>
                             <li><a>Settings</a></li>
                             <li><a>Logout</a></li>

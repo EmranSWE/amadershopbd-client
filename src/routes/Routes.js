@@ -12,6 +12,14 @@ import BestSell from '../components/Home/Best Selling Products/BestSell';
 import MobileStore from '../components/Home/Mobile Store/MobileStore';
 import Products from '../components/Layout/Products';
 import ProductDetails from '../components/Layout/ProductDetails';
+import Account from '../components/Layout/Account';
+import Profile from '../components/Account/Profile';
+import MyOrder from '../components/Account/MyOrder';
+import MyProductReview from '../components/Account/MyProductReview';
+import ManageAddress from '../components/Account/ManageAddress';
+import CheckOut from '../components/Layout/CheckOut';
+import Cart from '../components/Checkout/Cart';
+import Address from '../components/Checkout/Address';
 
 const routes = createBrowserRouter([
     {
@@ -63,6 +71,47 @@ const routes = createBrowserRouter([
             path:"/product-details/:id",
             element: <ProductDetails></ProductDetails>
 
+          },
+          {
+            path: "/checkout/",
+            element: <CheckOut />,
+            children:[
+                {
+                  path:"/checkout/cart",
+                  element:<Cart></Cart>
+              },
+              {
+                path:"/checkout/address",
+                element:<Address></Address>
+              }
+             
+            ]
+          },
+          {
+            path:"/product-details/:id",
+            element: <ProductDetails></ProductDetails>
+
+          },{
+            path:"/account",
+            element: <Account></Account>,
+            children:[
+              {
+                path: "/account/profile",
+                element: <Profile></Profile>
+            },
+            {
+              path: "/account/myorder",
+              element: <MyOrder></MyOrder>
+          },
+          {
+            path: "/account/review",
+            element: <MyProductReview></MyProductReview>
+        },
+        {
+          path: "/account/address",
+          element: <ManageAddress></ManageAddress>
+      }
+            ]
           },
           {
             path:"/dashboard",

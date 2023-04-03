@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 const Products = () => {
-    
     return (
         <div className='grid lg:grid-cols-5 sm:grid-cols-1'>
            <div className='bg-base-200'>
